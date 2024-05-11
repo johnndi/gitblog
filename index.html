@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1>everyday git</h1>
+        <h2>what is git</h2>
+        <p>Git is a version control system.
+            A version control system is a software tool that helps to track and manage changes to files, code, documents, and any other types of digital content over time.
+            In software engineering, git helps us to keep track of changes to code.
+            Git is also used to collaborate in code by several software engineers.
+            Git was developed by Linus Torvalds (Creator of Linux)
+            </p><br>
+            <h2>installing git</h2>
+            <ul>
+     <li>Your operating system does not come with git installed by default (especially windows operating system).</li>
+     <li>To check if you have git installed in your machine or not:
+        <ul>
+    <li>Open the command prompt in windows or terminal in linux/macos.
+    Type the command <b>git --version.</b>
+    Hit enter.</li>
+    </ul>
+    </li>
+                <li>If you have git installed, you should see something like: git version x.y<img src="./assets/pic 1.png" alt="message if git is installed" height="240" width=""></li>
+                <li>If not, then you will see an error message that the command is not recognized.</li>
+                <li>If you don’t have git installed, head over to <a href="https://www.git-scm.com/">https://www.git-scm.com</a>and download git from there.</li>
+            
+            </ul><br>
+            
+                
+                
+                
+                 
+                <h2>configuring git</h2>
+                <ul>
+                    <li>Now, let Git know who you are. This is an important step after installing git as each Git commit uses this information</li>
+                    <li>To let git know who you are, you pass in the username and email address.
+    To configure your email address: <b>git config –global user.email “your email address”</b><br>
+    </li><li><em>Tip: use your github email address or if you don’t have a github account, use an email address that you will use to sign up for github</em></li>
+    </ul>
+    <img src="./assets/pic 2.png" alt="configuring git" height="120" width=""><br>
+    
+        <h2>initializing git repository</h2>
+        <ul>
+            <li>Before we can use git in our project, we need initialize a git repository inside that project.</li>
+            <li> A git repository is a storage location where GIT version control system manages and stores project’s files and revision history.</li>
+            <li> Checking if a project contains a git repository already is important to avoid re-initializing a git repository where there is already one which is a bad practice in git.</li>
+            <li> To check if the project contains a git repository, run the command <b>git status</b>, if the project does not contain a git repository, you will get the message<b> “fatal not a git repository…”</b> this means that the project does not contain a git repository, any other message means that the project contains a git repository.</li>
+    <li>If the project/folder does not contain a git repository, you can initialize/create a repository using the command<b>git init</b> , if a repository is initialized successfully, you will see the text<b>“Initialized an empty git repository in…”</b></li>
+        </ul>
+    <img src="./assets/pic 3.png" alt="check if  git is there" height="120" width="">
+    <img src="./assets/pic 4.png" alt="initializing git" height="120" width=""><br>
+    
+            <h2>adding files to the staging area</h2>
+            <ul>
+                <li>A staging environment/staging area/index is an area where changes to files are prepared before they are committed to repository.</li>
+    <li>Whenever you hit a milestone, or finish part of the work, you should add the files to a staging environment.</li>
+    <li> Staged files are files that are ready to be committed to the repository you are working on.</li>
+    <li> To add a file to the staging environment, <b>use git add filename.</b></li>
+    <li>If you have more than one file, you can specify those files: <b>git add file1 file2 file3</b></li>
+    <li>If you want to add all the files in the project, instead of specifying those files, use a period symbol;<b>git add .</b> </li>
+    <li>You can also use<b>git add --all</b>  to add all the files.</li>
+    <li>  The shortcut for git add –all is <b>git add -A</b></li>
+    </ul>
+    <img src="./assets/pic 5.png" alt="git add  one file" height="60" width="">
+    <img src="./assets/pic 6.png" alt="git add for multiple files" height="60" width="">
+    <img src="./assets/pic 8.png" alt="git add . for multiple files" height="60" width=""><br>   
+                <h2>committing changes</h2>
+                <ul>
+                    <li>A commit in git is a snapshot of changes made to a repository at a particular point in time.</li>
+                    <li>Adding commits keeps track of our progress and changes as we work.</li>
+                    <li>Git considers each commit change point or a save point, it is a point we can go back to in our project if we find a bug or we want to make a change.</li>
+                    <li>We use git commit –m “commit message” to commit changes to our repository</li>
+                    <li>The commit command performs a commit and the -m “message” adds a message.</li>
+                    <li>If we want we can view past commits using the<b>git log</b>  command.</li>
+                    <li> We can use <b>git log --one line</b> if we want a bit more compressed output of git log.</li>
+                </ul>
+                <img src="./assets/pic 9.png" alt="committing files" height="120" width="">
+                <img src="./assets/pic 10.png" alt="commit log" height="120" width=""><br>
+                <h2>branches</h2>
+                <ul>
+                    <li>A branch is a new/separate version of the main repository</li>
+                    <li> Branches allow multiple developers to work on different features, bug fixes, or experiments simultaneously without interfering with each other’s work.</li>
+                    <li>When the work is complete, a branch can be merged into the main project</li>
+                    
+                </ul><br>
+                <h3>creating a branch</h3>
+                <ul>
+                    <li>To create branch, we use the command <b>git branch new-branch-name</b></li>
+                    
+                </ul>
+                <img src="./assets/pic 11.png" alt="creating a branch" height="120" width=""><br>
+                <h3>viewing all branches</h3>
+    <ul>
+    <li>We can then view all the branches we have using the command <b>git branch</b></li>
+    </ul>
+    <img src="./assets/pic 12.png" alt="viewing all branches" height="120" width=""><br>
+    <h3>switching active branches</h3>
+    <ul>
+        <li> The branch with a * symbol to its left is the active branch/the branch we are in, we can change branches using the command<b>git checkout branch-name</b></li>
+    </ul>
+    <img src="./assets/pic 13.png" alt="switching branches" height="120" width="">
+    <h3>merging a branch</h3>
+    <ul>
+        <li>Once you finish working in your branch and you are comfortable that is what you want, we merge this branch to the master branch/ the main branch.
+            The master/main branch typically contains the latest, stable version of the codebase, it is here where all finished and tested features are integrated.
+            To merge a branch, add all the changes made in that branch to the staging area, then commit those changes.
+            After that, move to your master/main branch/the branch you want to merge this branch with.
+            We then use the command git merge branch-name to merge that branch.</li>
+    </ul>
+    <img src="./assets/pic 14.png" alt="merging a branch" height="120" width=""><br>
+    <h3>deleting a branch</h3>
+    <ul>
+        <li> If we want/and are sure, we can then delete that branch using the command git branch –d branch-name</li>
+    </ul>
+    <img src="./assets/pic 15.png" alt="deleting a branch" height="120" width=""><br>
+    <h2>github</h2>
+    <p>after learning git the next tool one needs to be conversant with is github </p>
+    <ul>
+        <li>Github is a web based platform for hosting and collaborating on Git repositories.
+        </li>
+        <li>Github allows us to host Git repositories on it’s platform, we can store our code on github and collaborate with other developers from all over the world.
+        </li>
+        <li>You can sign up for a free personal github account at <a href=" https://github.com/"> https://github.com</a>
+        </li>
+    
+    </ul>
+    
+    
+    
+    </body> 
+</html>
